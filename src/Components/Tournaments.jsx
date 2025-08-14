@@ -20,6 +20,8 @@ export default function SimpleSlider({ UpData, PreData, search }) {
 					slidesToShow: 1,
 					slidesToScroll: 1,
 				},
+			},
+			{
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 2,
@@ -28,7 +30,6 @@ export default function SimpleSlider({ UpData, PreData, search }) {
 			},
 		],
 	};
-
 	return (
 		<div className="container Tournaments-div">
 			<div className="row tournament-div-1">

@@ -20,6 +20,8 @@ export default function SimpleSlider({ FestUpData, FestPreData, search }) {
 					slidesToShow: 1,
 					slidesToScroll: 1,
 				},
+			},
+			{
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 2,
