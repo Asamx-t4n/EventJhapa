@@ -1,0 +1,66 @@
+import React from "react";
+import Slider from "react-slick";
+import Card from "./Card";
+import "./Concert.css";
+
+export default function SimpleSlider({ FestUpData, FestPreData, search }) {
+	const Filter = FestUpData.filter((item) => {
+		return item.Title.toLowerCase().includes(search.toLowerCase());
+	});
+	var settings = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	};
+
+	return (
+		<div className="container Tournaments-div">
+			<div className="row tournament-div-1">
+				<h1 className="Tournament-Title">UpComming Festivals</h1>
+				<Slider {...settings}>
+					{Filter.map((item) => (
+						<Card
+							key={item.id}
+							{...item}
+							type="festival"
+							BuyTicket={false}
+							bigDescription={false}
+						/>
+					))}
+				</Slider>
+			</div>
+
+			<div className="row tournament-div-1 ">
+				<h1 className="Tournament-Title">Previous Festivals</h1>
+				<Slider {...settings}>
+					{FestPreData.map((items) => (
+						<Card
+							key={items.id}
+							{...items}
+							type="festival"
+							mapSrc={false}
+							BuyTicket={false}
+							Details={false}
+						/>
+					))}
+				</Slider>
+			</div>
+		</div>
+	);
+}
