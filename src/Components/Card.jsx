@@ -15,6 +15,7 @@ const Card = ({
 	BuyTicket,
 	type,
 	bigDescription,
+	Live,
 }) => {
 	return (
 		<div
@@ -48,6 +49,11 @@ const Card = ({
 			{BuyTicket && <button className="Card-Button2">Buy Ticket</button>}
 			{bigDescription && (
 				<span className="Card-bigDescription">{bigDescription}</span>
+			)}
+			{Live && (
+				<button className="Live-Button">
+					<i class="fa-solid fa-circle-dot Live-Dot"></i>Live
+				</button>
 			)}
 		</div>
 	);

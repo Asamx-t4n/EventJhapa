@@ -111,6 +111,19 @@
 	justify-content: center;
 	font-family: "Signika Negative", sans-serif;
 }
+
+.Live-Button {
+	background: linear-gradient(to left, pink, blue);
+	border-radius: 15%;
+	color: black;
+	transition: all 0.3s ease-out;
+	border: none;
+	height: 2rem;
+	width: 17rem;
+}
+.Live-Button:hover {
+	transform: scale(1.1);
+}
 @media screen and (max-width: 480px) {
 	.Card-div {
 		margin: 2rem;
@@ -155,5 +168,17 @@
 		transition: all 0.3s ease-in-out;
 		border: 1px solid black;
 		border-radius: 15%;
+	}
+	.Live-Button {
+		background: linear-gradient(to left, pink, blue);
+		border-radius: 15%;
+		color: black;
+		transition: all 0.3s ease-out;
+		border: none;
+		height: 2rem;
+		width: 12rem;
+	}
+	.Live-Button:hover {
+		transform: scale(1.1);
 	}
 }

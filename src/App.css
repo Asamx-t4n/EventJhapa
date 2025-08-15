@@ -69,6 +69,10 @@
 .Footer-icon {
 	margin-top: 1rem;
 }
+.Live-Dot {
+	color: red;
+	height: 0.7rem;
+}
 
 @media screen and (max-width: 480px) {
 	/* Mobile styles here */

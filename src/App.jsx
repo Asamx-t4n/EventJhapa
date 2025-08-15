@@ -7,6 +7,7 @@ import TournamentsDetails from "./Components/TournamentDetails";
 import Concert from "./Components/Concert";
 import Festival from "./Components/Festival";
 import FindTickets from "./Components/FindTickets";
+import LiveIn from "./Components/LiveIn";
 import {
 	UpData,
 	PreData,
@@ -16,6 +17,7 @@ import {
 	FestPreData,
 } from "./Components/AllData";
 import SignIn from "./Components/SignIn";
+import Live from "./Components/LiveIn";
 
 const App = () => {
 	const [search, setSearch] = useState("");
@@ -73,8 +75,8 @@ const App = () => {
 						Home
 					</NavLink>
 
-					<NavLink to="/concerts" className="nav-link">
-						create Event
+					<NavLink to="/LiveIn" className="nav-link">
+						<i class="fa-solid fa-circle-dot Live-Dot"></i>Live
 					</NavLink>
 
 					<NavLink to="/FindTickets" className="nav-link">
@@ -134,6 +136,7 @@ const App = () => {
 					<Route path="/Details/:type/:id" element={<TournamentsDetails />} />
 					<Route path="/FindTickets" element={<FindTickets />} />
 					<Route path="/SignIn" element={<SignIn />} />
+					<Route path="/LiveIn" element={<LiveIn />} />
 				</Routes>
 			</div>
 			<div className="container ">
