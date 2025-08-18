@@ -15,7 +15,7 @@ export default function SimpleSlider({ ConUpData, ConPreData, search }) {
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,

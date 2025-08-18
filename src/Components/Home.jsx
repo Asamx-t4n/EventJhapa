@@ -127,8 +127,7 @@ export default function SimpleSlider() {
 			<div className="container UPCOMMING-EVENTS">
 				<div className="row">
 					<h1 className="UPCOMMING-TITLE">Up Comming Events and festivals</h1>
-					<div className="col-md-12 col-lg-6 col-sm-12 Main-event">
-						<h2 className="SOON-TITLE">soon</h2>
+					<div className="col-md-12 col-lg-6 col-sm-12 Main-event Small-cards">
 						<Card
 							Title="Dashain"
 							Date="2025-09-22"
@@ -139,7 +138,7 @@ export default function SimpleSlider() {
 					</div>
 					<div className="col-md-12 col-lg-6 col-sm-12">
 						<div className="row">
-							<div className="col-md-4 col-sm-6 Small-cards">
+							<div className="col-md-6 col-sm-6 Small-cards">
 								<Card
 									Title="Event"
 									Date="2025-09-22"
@@ -148,7 +147,7 @@ export default function SimpleSlider() {
 									location="Jhapa,damak"
 								/>
 							</div>
-							<div className="col-md-4 col-sm-6  Small-cards">
+							<div className="col-md-6 col-sm-6  Small-cards">
 								<Card
 									Title="Event"
 									Date="2025-09-22"
@@ -157,7 +156,7 @@ export default function SimpleSlider() {
 									location="Jhapa,jhiljile"
 								/>
 							</div>
-							<div className="col-md-4 col-sm-6  Small-cards">
+							<div className="col-md-6 col-sm-6  Small-cards">
 								<Card
 									Title="Event"
 									Date="2025-09-22"
@@ -166,7 +165,7 @@ export default function SimpleSlider() {
 									location="Jhapa,charali"
 								/>
 							</div>
-							<div className="col-md-4 col-sm-6  Small-cards">
+							<div className="col-md-6 col-sm-6  Small-cards">
 								<Card
 									Title="Event"
 									Date="2025-09-22"
@@ -175,7 +174,7 @@ export default function SimpleSlider() {
 									location="Jhapa,laxmipur"
 								/>
 							</div>
-							<div className="col-md-4 col-sm-6  Small-cards">
+							<div className="col-md-6 col-sm-6  Small-cards">
 								<Card
 									Title="Event"
 									Date="2025-09-22"
@@ -184,7 +183,7 @@ export default function SimpleSlider() {
 									location="Jhapa,bagan"
 								/>
 							</div>
-							<div className="col-md-4 col-sm-6  Small-cards">
+							<div className="col-md-6 col-sm-6  Small-cards">
 								<Card
 									Title="Festival"
 									Date="2025-09-22"

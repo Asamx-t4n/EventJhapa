@@ -142,7 +142,11 @@ const App = () => {
 			<div className="container ">
 				<footer className="row Footer">
 					<div className="col-md-4 col-sm-6 Footer-logo-div ">
-						<img className="Footer-logo" src="/logo.jpg" alt="logo" />
+						<img
+							className="Footer-logo"
+							src="/EventJhapa/logo.jpg"
+							alt="logo"
+						/>
 						<div className="Footer-icon">
 							<i class="fa-brands fa-facebook me-2"></i>
 							<i class="fa-brands fa-twitter me-2"></i>

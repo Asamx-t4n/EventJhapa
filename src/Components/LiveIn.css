@@ -2,10 +2,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	/* border: 1px solid red; */
 }
-.LiveDiv {
+
+.live-container {
+	padding: 2rem 1rem;
+}
+
+.live-row {
 	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
 	justify-content: center;
-	align-items: center;
 }
