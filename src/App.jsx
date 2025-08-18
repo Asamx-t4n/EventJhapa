@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Route, Routes, NavLink, useNavigate } from "react-router-dom";
+import {
+	Route,
+	Routes,
+	NavLink,
+	useNavigate,
+	Navigate,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
 import Tournaments from "./Components/Tournaments";
@@ -8,6 +14,7 @@ import Concert from "./Components/Concert";
 import Festival from "./Components/Festival";
 import FindTickets from "./Components/FindTickets";
 import LiveIn from "./Components/LiveIn";
+import SignIn from "./Components/SignIn";
 import {
 	UpData,
 	PreData,
@@ -16,8 +23,6 @@ import {
 	FestUpData,
 	FestPreData,
 } from "./Components/AllData";
-import SignIn from "./Components/SignIn";
-import Live from "./Components/LiveIn";
 
 const App = () => {
 	const [search, setSearch] = useState("");
@@ -59,7 +64,7 @@ const App = () => {
 
 	return (
 		<div className="container">
-			{/* Navigation */}
+			{/* Navbar */}
 			<nav className="nav">
 				<h2 className="nav_logo">Jhapa Events</h2>
 				<input
@@ -76,11 +81,11 @@ const App = () => {
 					</NavLink>
 
 					<NavLink to="/LiveIn" className="nav-link">
-						<i class="fa-solid fa-circle-dot Live-Dot"></i>Live
+						<i className="fa-solid fa-circle-dot Live-Dot"></i> Live
 					</NavLink>
 
 					<NavLink to="/FindTickets" className="nav-link">
-						find tickets
+						Find Tickets
 					</NavLink>
 
 					<select
@@ -104,6 +109,8 @@ const App = () => {
 					onClick={() => setIsOpen(!isOpen)}
 				></i>
 			</nav>
+
+			{/* Main Content */}
 			<div className="Display-Data">
 				<Routes>
 					<Route path="/" element={<Home />} />
@@ -137,39 +144,38 @@ const App = () => {
 					<Route path="/FindTickets" element={<FindTickets />} />
 					<Route path="/SignIn" element={<SignIn />} />
 					<Route path="/LiveIn" element={<LiveIn />} />
+
+					{/* Wildcard: Redirect unknown URLs to Home */}
+					<Route path="*" element={<Navigate to="/" replace />} />
 				</Routes>
 			</div>
-			<div className="container ">
-				<footer className="row Footer">
-					<div className="col-md-4 col-sm-6 Footer-logo-div ">
-						<img
-							className="Footer-logo"
-							src="/EventJhapa/logo.jpg"
-							alt="logo"
-						/>
-						<div className="Footer-icon">
-							<i class="fa-brands fa-facebook me-2"></i>
-							<i class="fa-brands fa-twitter me-2"></i>
-							<i class="fa-brands fa-instagram"></i>
-						</div>
+
+			{/* Footer */}
+			<footer className="row Footer">
+				<div className="col-md-4 col-sm-6 Footer-logo-div">
+					<img className="Footer-logo" src="/EventJhapa/logo.jpg" alt="logo" />
+					<div className="Footer-icon">
+						<i className="fa-brands fa-facebook me-2"></i>
+						<i className="fa-brands fa-twitter me-2"></i>
+						<i className="fa-brands fa-instagram"></i>
 					</div>
-					<div className="col-md-4 col-sm-6 Footer-copyright-div">
-						<span className="Footer-copyright"> ©sam-X</span>
-					</div>
-					<div className="col-md-4 col-sm-6 Footer-contact-div">
-						<p>Contact Us</p>
-						<p>
-							<i class="fa-solid fa-location-dot"></i>Jhapa,Birtamode
-						</p>
-						<p>
-							<i class="fa-solid fa-phone"></i>+977 986232798
-						</p>
-						<p>
-							<i class="fa-solid fa-at"></i>samratbhattarai@gmail.com
-						</p>
-					</div>
-				</footer>
-			</div>
+				</div>
+				<div className="col-md-4 col-sm-6 Footer-copyright-div">
+					<span className="Footer-copyright">© sam-X</span>
+				</div>
+				<div className="col-md-4 col-sm-6 Footer-contact-div">
+					<p>Contact Us</p>
+					<p>
+						<i className="fa-solid fa-location-dot"></i> Jhapa, Birtamode
+					</p>
+					<p>
+						<i className="fa-solid fa-phone"></i> +977 986232798
+					</p>
+					<p>
+						<i className="fa-solid fa-at"></i> samratbhattarai@gmail.com
+					</p>
+				</div>
+			</footer>
 		</div>
 	);
 };
