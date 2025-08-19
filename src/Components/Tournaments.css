@@ -28,3 +28,13 @@
 	align-items: center;
 	font-family: "Edu NSW ACT Cursive", cursive;
 }
+
+.slick-track {
+	display: flex !important;
+}
+
+@media (max-width: 768px) {
+	.slick-slide {
+		width: 100% !important;
+	}
+}
