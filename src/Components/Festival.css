@@ -20,6 +20,8 @@
 	align-items: center;
 	font-family: "Edu NSW ACT Cursive", cursive;
 }
+
+/* THis is the solution of overlap in small size screen >>>> try this */
 .slick-track {
 	display: flex !important;
 }
